@@ -1,36 +1,54 @@
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H43P9OI)
 
-Ansible role: linuxgsm
-=========
+# Ansible role: linuxgsm
 
-A brief description of the role goes here.
+Download LinuxGSM to a common location on Linux systems and optionally install
+all the dependency packages required to use it.
 
-Requirements
-------------
+More information about LinuxGSM can be found at [GameServerManagers/LinuxGSM](https://github.com/GameServerManagers/LinuxGSM).
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+## Example Playbook
 
-Role Variables
---------------
-
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
-
-Dependencies
-------------
-
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
-
-Example Playbook
-----------------
-
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+To get started using the role:
 
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+         - stonesoupkitchen.linuxgsm
 
-License
--------
+Some users may use alternative Ansible roles to manage some of the same
+dependent packages that this role does. To disable the installation of
+these packages:
+
+    - hosts: servers
+      roles:
+         - stonesoupkitchen.linuxgsm
+      vars:
+        linuxgsm_install_dependencies: no
+
+To change the install path of the LinuxGSM executable:
+
+    - hosts: servers
+      roles:
+         - stonesoupkitchen.linuxgsm
+      vars:
+        linuxgsm_install_dir: '/path/to/install/dir'
+
+## Role Variables
+
+### Defaults
+
+| Variable                        | Description                                     | Default         |
+|---------------------------------|-------------------------------------------------|-----------------|
+| `linuxgsm_install_dir`          | Default installation directory for LinuxGSM.    | `/opt/linuxgsm` |
+| `linxugsm_install_dependencies` | Install prerequisites for LinuxGSM.             | yes             |
+
+### Vars
+
+| Variable                | Description                           | Value                                    |
+|-------------------------|---------------------------------------|------------------------------------------|
+| `linuxgsm_install_path` | Full path to the LinuxGSM executable. | `{{ linuxgsm_install_dir }}/linuxgsm.sh` |
+
+## License
 
 See [LICENSE](LICENSE).
 
