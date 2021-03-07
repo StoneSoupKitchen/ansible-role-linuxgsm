@@ -1,2 +1,3 @@
 ---
-# vars file for linuxgsm
+# Full path to the LinuxGSM script.
+linuxgsm_install_path: '{{ linuxgsm_install_dir }}/linuxgsm.sh'

@@ -2,19 +2,13 @@
 - name: Create linuxgsm installation directory
   file:
     state: directory
-    path: '{{ linuxgsm_install_path }}'
-    mode: '0755'
-
-- name: Create linuxgsm bin directory
-  file:
-    state: directory
-    path: '{{ linuxgsm_install_path }}/bin'
+    path: '{{ linuxgsm_install_dir }}'
     mode: '0755'
 
 - name: Download LinuxGSM to target directory
   get_url:
     url: https://linuxgsm.sh
-    dest: '{{ linuxgsm_install_path }}/bin/linuxgsm.sh'
+    dest: '{{ linuxgsm_install_path }}'
     mode: '0755'
 
 - include_tasks: "dependencies.yml"
