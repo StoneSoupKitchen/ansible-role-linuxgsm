@@ -1,0 +1,27 @@
+---
+- name: Install LinuxGSM dependencies
+  apt:
+    name: '{{ package }}'
+    state: present
+  loop:
+    - bc
+    - binutils
+    - bsdmainutils
+    - bzip2
+    - ca-certificates
+    - cpio
+    - curl
+    - file
+    - gzip
+    - jq
+    - lib32gcc1
+    - lib32stdc++6
+    - netcat
+    - python3
+    - tar
+    - tmux
+    - unzip
+    - util-linux
+    - wget
+  loop_control:
+    loop_var: package

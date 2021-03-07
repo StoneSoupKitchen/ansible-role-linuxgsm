@@ -16,3 +16,7 @@
     url: https://linuxgsm.sh
     dest: '{{ linuxgsm_install_path }}/bin/linuxgsm.sh'
     mode: '0755'
+
+- include_tasks: "dependencies.yml"
+  when:
+    - linuxgsm_install_dependencies == True
