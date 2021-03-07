@@ -44,9 +44,9 @@ To change the install path of the LinuxGSM executable:
 
 ### Vars
 
-| Variable                | Description                           | Value                                    |
-|-------------------------|---------------------------------------|------------------------------------------|
-| `linuxgsm_install_path` | Full path to the LinuxGSM executable. | `{{ linuxgsm_install_dir }}/linuxgsm.sh` |
+| Variable                | Description                           |
+|-------------------------|---------------------------------------|
+| `linuxgsm_install_path` | Full path to the LinuxGSM executable. |
 
 ## License
 
