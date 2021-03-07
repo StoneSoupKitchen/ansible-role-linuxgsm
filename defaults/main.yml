@@ -1,0 +1,3 @@
+---
+# Default installation path for LinuxGSM.
+linuxgsm_install_path: '/opt/linuxgsm'
