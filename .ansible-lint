@@ -4,4 +4,3 @@ skip_list:
   - 'role-name'
 use_default_rules: true
 verbosity: 1
-
