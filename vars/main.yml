@@ -1,3 +1,25 @@
 ---
 # Full path to the LinuxGSM script.
 linuxgsm_install_path: '{{ linuxgsm_install_dir }}/linuxgsm.sh'
+
+# Packages that LinuxGSM requires to function.
+__linuxgsm_dependency_packages:
+  - bc
+  - binutils
+  - bsdmainutils
+  - bzip2
+  - ca-certificates
+  - cpio
+  - curl
+  - file
+  - gzip
+  - jq
+  - lib32gcc1
+  - lib32stdc++6
+  - netcat
+  - python3
+  - tar
+  - tmux
+  - unzip
+  - util-linux
+  - wget
