@@ -13,4 +13,4 @@
 
 - include_tasks: "dependencies.yml"
   when:
-    - linuxgsm_install_dependencies == True
+    - linuxgsm_install_dependencies
