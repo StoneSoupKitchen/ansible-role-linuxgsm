@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2021-03-20
+
 * Additional code cleanup with Ansible Lint.
 * Improve role execution speed by installing LinuxGSM dependencies with a
   list variable instead of looping over each package individually.
@@ -20,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * Initial release.
 
-[Unreleased]: https://github.com/StoneSoupKitchen/ansible-role-linuxgsm/compare/1.0.1...HEAD
+[Unreleased]: https://github.com/StoneSoupKitchen/ansible-role-linuxgsm/compare/1.1.0...HEAD
+[1.1.0]: https://github.com/StoneSoupKitchen/ansible-role-linuxgsm/compare/1.0.1...1.1.0
 [1.0.1]: https://github.com/StoneSoupKitchen/ansible-role-linuxgsm/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/StoneSoupKitchen/ansible-role-linuxgsm/releases/tag/1.0.0
